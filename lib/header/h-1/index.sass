@@ -1,0 +1,311 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-header-1
+	position: fixed
+	z-index: 998
+	background-color: color-get($mau, trang)
+	// +box-shadow(0px 4px 19px 0px rgba(0,0,0,0.5))
+	.nth1608-megamenu
+		display: none
+	.tools-wrapper
+		+size(100%, 3rem)
+		+pad(0 .5rem)
+		+flex-center-center
+		flex-wrap: wrap
+		.search-box
+			+pad(0 .5rem)
+			flex: 0 0 85%
+			max-width: 85%
+			+media-breakpoint-up(lg)
+				flex: 0 0 60%
+				max-width: 60%
+			+pos(relative, null)
+			input
+				+no-spacing
+				+size(100%, rem(28px))
+				border: 0
+				outline: none
+				padding-right: 2rem
+				&:focus
+					box-shadow: 0
+				border-bottom: 1px solid color-get($mau, xam-13)
+				color: color-get($mau, den-1)
+			button
+				padding: 0
+				outline: none
+				border: 0
+				height: 24px
+				width: 24px
+				font-size: 1.5rem
+				position: absolute
+				bottom: 0.6rem
+				right: 1rem
+				background: none
+				color: color-get($mau, main)
+				cursor: pointer
+		.login-form
+			flex: 0 0 15%
+			max-width: 15%
+			+flex-center-center()
+			+pad(0 .5rem)
+			+pos(relative, null)
+			&:before
+				+size(rem(1px), 50%)
+				+pos(abs, 50% null null 0)
+				content: ''
+				background-color: color-get($mau, xam-15)
+				+transform(translateY(-50%))
+			a
+				+fz(1.5rem)
+				color: color-get($mau, xam-14)
+				height: 1.56253rem
+				+flex-center-center()
+		.language
+			flex: 0 0 25%
+			max-width: 25%
+			height: 1.56253rem
+			+flex-center-center()
+			+pad(0 .5rem)
+			+pos(relative, null)
+			&:before
+				+size(rem(1px), 50%)
+				+pos(abs, 50% null null 0)
+				content: ''
+				background-color: color-get($mau, xam-15)
+				+transform(translateY(-50%))
+			a
+				&:first-child
+					padding-right: rem(2px)
+				&:last-child
+					padding-left: rem(2px)
+				img
+					filter: grayscale(1.0)
+				&.language-active
+					img
+						filter: grayscale(0)
+	
+	+media-breakpoint-down(md)
+		
+		.k-menu-bar
+			+pad(0 rem(16px))
+			+size(100%, 2.64rem)
+			#logo
+				.k-logo.navbar-brand
+					padding: 0
+					margin: 0
+					+flex-center-center
+					img
+						max-height: 1rem
+			button
+				padding: 0
+				outline: none
+				border: 0
+				i, em
+					+flex-center-center
+					+fz(1.5rem)
+			.navbar-toggler
+				margin-top: .2rem
+			.language
+				margin-right: 1rem
+				a
+					&:first-child
+						padding-right: rem(4px)
+					&:last-child
+						padding-left: rem(4px)
+					img
+						filter: grayscale(1.0)
+					&.language-active
+						img
+							filter: grayscale(0)
+		.k-responsive-menu
+			background-color: color-get($mau, trang)
+			padding-bottom: 2rem !important
+			overflow-x: hidden
+			.k-menu-bar.active
+				.k-logo.navbar-brand
+					+no-spacing
+					img
+						max-height: 1rem
+		
+		.nav-wrapper
+			+flex-center-center()
+			flex-direction: column
+			align-items: flex-end
+			margin-top: 1rem
+
+		
+		ul.nav
+			+fz(0)
+			width: 100%
+			li
+				width: 100%
+				a
+					+fz(.85rem)
+					padding: 0
+					+mar(0 1rem)
+					color: color-get($mau, den-1)
+					+size(100%, 3rem)
+					line-height: 3rem
+					text-transform: uppercase
+					+fw(400)
+		.nth-subnav-collapse
+			+pos(relative, null)
+			height: 3rem
+			overflow: hidden
+			+transition(.3s ease-in-out)
+			&.nth-subnav-active
+				height: 19rem
+			a.btn.nth-toggle-subnav
+				position: absolute
+				top: 0
+				border: 0
+				right: .2rem
+				margin: 0
+				width: 3rem
+				outline: none
+				+transition(.3s ease-in-out)
+				i, em
+					height: 3rem
+					+fz(1.5rem)
+				&.nth-toggle-subnav-active
+					transform: rotate(180deg)
+			.nth-subnav-1
+				margin-left: 1rem
+				.nth-subnav-1-item
+					display: block
+					height: 2rem
+					line-height: 2rem
+					width: 10rem
+					color: color-get($mau, trang)
+					background-color: color-get($mau, main)
+					border-top-right-radius: 2.5rem
+					border-bottom-right-radius: 2.5rem
+					padding-left: 1rem
+					+fw(500)
+					outline: none
+					text-decoration: none
+				.nth-subnav-2
+					margin-left: 1rem
+					.nth-subnav-2-item
+						display: block
+						margin-left: 2rem
+						+fw(300)
+						text-decoration: none
+
+
+	+media-breakpoint-up(lg)
+		background-color: color-get($mau, trang)
+		padding-top: .5rem
+		padding-bottom: .75rem
+		.k-responsive-menu
+			padding-bottom: 0
+			padding-top: 0
+			justify-content: space-between
+		.nth-toggle-subnav, .nth-subnav-1
+			display: none
+		.k-logo.navbar-brand
+			padding: 0
+			margin-bottom: -1rem
+			img
+				max-height: 2.375rem
+		.nav-wrapper
+			display: flex
+			flex-direction: column-reverse
+			ul.nav
+				a.nav-link
+					+fz(rem(16px))
+					+fw(400)
+					text-transform: uppercase
+					color: color-get($mau, den-1)
+					padding: 0
+					margin-left: rem(12px)
+					margin-right: rem(12px)
+					+transition(.3s ease-in-out)
+					&:hover
+						color: color-get($mau, main)
+						+box-shadow(0px 1px 0px 0px color-get($mau, main))
+					&.header-active
+						color: color-get($mau, main)
+						+box-shadow(0px 1px 0px 0px color-get($mau, main))
+			.tools-wrapper
+				width: 50%
+				margin-left: auto
+		.nth1608-megamenu
+			position: absolute
+			height: rem(309px)
+			max-width: rem(930px)
+			width: rem(930px)
+			left: -200%
+			opacity: 0
+			+transform(translateX(-50%))
+			background-color: color-get($mau, xam-16)
+			+pad(rem(35px) rem(45px))
+			+flex-center-center()
+			align-items: flex-start
+			+box-shadow(0px 3px 15px 0px rgba(0, 0, 0, 0.22))
+			+media-breakpoint-up(xl)
+				max-width: rem(1110px)
+				width: rem(1110px)
+				height: rem(369px)
+			.megamenu-image
+				+size(rem(197.6px), rem(239.2px))
+				+media-breakpoint-up(xl)
+					+size(rem(247px), rem(299px))
+			.megamenu-block
+				flex: 0 0 50%
+				+flex-center-center()
+				align-items: flex-start
+				&:first-child
+					margin-right: rem(35px)
+				&:last-child
+					margin-left: rem(35px)
+				.megamenu-content
+					margin-left: rem(35px)
+					margin-top: rem(22px)
+					a
+						text-decoration: none
+					.nth-meganav-1
+						+size(rem(166px), rem(30px))
+						background-color: color-get($mau, main)
+						line-height: rem(30px)
+						border-top-right-radius: .9375rem
+						border-bottom-right-radius: .9375rem
+						+transition(.3s ease-in-out)
+						&:hover
+							border-top-left-radius: .9375rem
+							border-bottom-left-radius: .9375rem
+							border-top-right-radius: initial
+							border-bottom-right-radius: initial
+						.nth-meganav-1-item
+							padding-left: rem(30px)
+							color: color-get($mau, trang)
+							+fz(1rem)
+							+fw(500)
+							text-transform: uppercase
+							display: block
+					.nth-meganav-2
+						margin-top: 1rem
+						display: flex
+						flex-direction: column
+						.nth-meganav-2-item
+							padding-left: 2rem
+							+fz(rem(13px))
+							+fw(400)
+							text-transform: uppercase
+							color: color-get($mau, den-1)
+							+transition(.3s ease-in-out)
+							+size(100%, rem(30px))
+							line-height: rem(30px)
+							&:hover
+								color: color-get($mau, main)
+							+pos(relative, null)
+							&:before
+								+pos(abs, 0 null null 0)
+								+size(2rem, rem(30px))
+								color: color-get($mau, xam-17)
+								content: "\F142"
+								font: normal normal normal 24px/1 "Material Design Icons"
+								+flex-center-center()

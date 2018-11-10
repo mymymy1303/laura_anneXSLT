@@ -1,0 +1,72 @@
+header.nth-header-1
+	.k-menu-bar.container
+		#logo.mr-auto
+		#language-map
+		button.k-button-toggle.navbar-toggler(k-toggle-for='#demoResAllInOneMenu')
+			i.mdi.mdi-menu
+	#demoResAllInOneMenu.container.k-responsive-menu
+		.k-menu-bar
+			.k-logo.navbar-brand.mr-auto
+				img(src="./img/_global/logo.png", alt="")
+			button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+				i.mdi.mdi-close
+		.k-logo.navbar-brand(k-menu-map-to="#logo")
+			img(src="./img/_global/logo.png", alt="").img-fluid
+		.nav-wrapper
+			ul.nav.ml-auto
+				li.nav-item
+					a.nav-link(href='/').header-active Trang chủ
+				li.nav-item
+					a.nav-link(href='/about.html') Giới thiệu
+				li.nav-item.nth-subnav-collapse#megamenu-link
+					a.nav-link(href='/products.html') Sản phẩm
+					.nth1608-megamenu#megamenu
+						.megamenu-block
+							img(src="./img/sanpham/mega_product_1.png", alt="").megamenu-image
+							.megamenu-content
+								.nth-meganav-1
+									a(href='#').nth-meganav-1-item for her
+								.nth-meganav-2
+									a(href='#').nth-meganav-2-item nước hoa
+									a(href='#').nth-meganav-2-item sữa tắm
+						.megamenu-block
+							img(src="./img/sanpham/mega_product_2.png", alt="").megamenu-image
+							.megamenu-content
+								.nth-meganav-1
+									a(href='#').nth-meganav-1-item for her
+								.nth-meganav-2
+									a(href='#').nth-meganav-2-item nước hoa
+									a(href='#').nth-meganav-2-item sữa tắm
+					a.btn.nth-toggle-subnav
+						i.mdi.mdi-chevron-down
+					.nth-subnav-1
+						a(href='#').nth-subnav-1-item for her
+						.nth-subnav-2
+							a(href='#').nth-subnav-2-item nước hoa
+							a(href='#').nth-subnav-2-item sữa tắm
+					.nth-subnav-1
+						a(href='#').nth-subnav-1-item for him
+						.nth-subnav-2
+							a(href='#').nth-subnav-2-item nước hoa
+							a(href='#').nth-subnav-2-item sữa tắm
+				li.nav-item
+					a.nav-link(href='/news.html') Tin tức
+				li.nav-item
+					a.nav-link(href='/allocation.html') Phân phối
+				li.nav-item
+					a.nav-link(href='/contact.html') Liên hệ
+			.tools-wrapper
+				.search-box
+					input(type="text").searchinput
+					button.searchbutton
+						i.mdi.mdi-magnify
+				.login-form
+					a(href="#")
+						i.mdi.mdi-account
+				.language(k-menu-map-to="#language-map")
+					a(href="#")
+						img(src="./img/_global/flag_vn.png", alt="")
+					a(href="#")
+						img(src="./img/_global/flag_en.png", alt="")
+
+	

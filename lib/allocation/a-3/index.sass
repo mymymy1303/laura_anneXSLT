@@ -1,0 +1,98 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-allocation-3
+	+media-breakpoint-up(lg)
+		display: none
+	+media-breakpoint-down(md)
+		overflow: hidden
+		.nth-allocation-3-sidemenu
+			width: rem(300px)
+			height: 100%
+			position: fixed
+			top: 0
+			left: -19rem
+			z-index: 1000
+			background-color: color-get($mau, trang)
+			+transition(.3s ease-in-out)
+			.nth-allocation-3-placechooser
+				+pad(rem(20px) rem(30px))
+				padding-bottom: 14px
+				+size(calc(100% + 1px), rem(279px))
+				background-color: color-get($mau,den-3)
+				h2
+					+fz(18px)
+					+fw(500)
+					color: color-get($mau, trang)
+					padding-left: 1rem
+					text-transform: uppercase
+					margin-bottom: 0
+				input[type=submit]
+					padding: 0
+					border: 0
+					outline: none
+					background-color: color-get($mau, main)
+					color: color-get($mau, trang)
+					+size(rem(126px), rem(34px))
+					+bor-rad(rem(17px))
+					margin-top: rem(12px)
+					margin-left: calc((18.75rem - 7.875rem)/2 - 1.875rem)
+					cursor: pointer
+		
+			.nth-allocation-3-mapchooser
+				+fz(0)
+				+no-spacing
+				overflow-y: scroll
+				height: calc(100% - 17.4375rem)
+				&::-webkit-scrollbar
+					width: rem(3px)
+
+				&::-webkit-scrollbar-track
+					background: color-get($mau, trang)
+
+				&::-webkit-scrollbar-thumb
+					background: color-get($mau, main)
+				li
+					+pad(.5rem rem(30px))
+					border-bottom: 1px solid color-get($mau, xam-30)
+					cursor: pointer
+					background-color: color-get($mau, xam-31)
+					h3, p
+						color: color-get($mau, xam-3)
+					h3
+						+fz(rem(15px))
+						+fw(700)
+						margin-bottom: .25rem
+					p
+						+fz(rem(13px))
+						+fw(400)
+						margin-bottom: 0
+					&.mapchooser-active
+						background-color: color-get($mau, trang)
+			&.nth-allocation-3-sidemenu-active
+				left: 0rem
+		.nth-allocation-3-backdrop
+			width: calc(100% - 18rem)
+			height: 100%
+			position: fixed
+			top: 0
+			right: -43rem
+			z-index: 999
+			background-color: rgba(0, 0, 0, .75)
+			cursor: pointer
+			+transition(.3s ease-in-out)
+			&.nth-allocation-3-backdrop-active
+				right: 0
+		.nth-allocation-3-closebutton
+			+fz(1.5rem)
+			color: color-get($mau, trang)
+			position: absolute
+			top: 0
+			right: .275rem
+			z-index: 999
+
+.allocation_map
+	min-height: rem(400px)
+	width: 100%

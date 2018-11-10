@@ -1,0 +1,60 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-tips-nav
+	position: sticky
+	top: rem(42.24px)
+	z-index: 1
+	background-color: color-get($mau, trang)
+	padding-bottom: 12px
+	+media-breakpoint-up(lg)
+		top: rem(92px)
+	ul
+		+fz(0)
+		+no-spacing()
+		+size(rem(240px), rem(32px))
+		list-style: none
+		margin-left: auto
+		margin-right: auto
+		+box-shadow(inset 0 0 0 rem(1px) color-get($mau, xam-24))
+		+bor-rad(9px)
+		li
+			+size(rem(80px), 100%)
+			line-height: rem(32px)
+			display: inline-block
+			+box-shadow(rem(1px) 0 0 0 color-get($mau, xam-24))
+			+transition(.3s ease-in-out)
+			&:first-child
+				border-top-left-radius: rem(9px)
+				border-bottom-left-radius: rem(9px)
+			&:last-child
+				border-top-right-radius: rem(9px)
+				border-bottom-right-radius: rem(9px)
+				box-shadow: none
+			&.nth-tips-nav-active
+				background-color: color-get($mau, main)
+				a
+					color: color-get($mau, trang)
+			&:hover, &:active, &:focus
+				background-color: color-get($mau, main)
+				a
+					color: color-get($mau, trang)
+			a
+				+fz(1rem)
+				+fw(400)
+				color: color-get($mau, xam-23)
+				display: block
+				text-align: center
+				+size(rem(80px), 100%)
+				text-decoration: none
+				+transition(.3s ease-in-out)
+
+		+media-breakpoint-up(md)
+			width: rem(339px)
+			li
+				width: rem(113px)
+				a
+					width: rem(113px)
+					+fz(16px)

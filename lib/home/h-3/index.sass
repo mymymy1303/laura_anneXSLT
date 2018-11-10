@@ -1,0 +1,78 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+.canhcam-home-3
+	+pad(2rem null)
+	h2
+		color: color-get($mau,main)
+		+fz(rem(42px))
+		+fw(400)
+		margin-bottom: rem(45px)
+		text-align: center
+	.item
+		text-decoration: none
+		display: flex
+		justify-content: center
+		align-items: center
+		figure
+			margin-bottom: 0
+			.boxzoom
+				+pad(4rem 1.5rem 2rem 1.5rem)
+				background: color-get($mau,xam-2)
+			figcaption
+				padding-top: rem(25px)
+				text-align: center
+				h3 , h4
+					color: color-get($mau,den-1)
+				h3
+					+fz(rem(15px))
+					+fw(400)
+					margin-bottom: rem(12px)
+				h4
+					+fw(700)
+					+fz(rem(13px))
+					margin-bottom: rem(17px)
+					text-transform: uppercase
+				.price
+					+fz(rem(19px))
+					+fw(600)
+					color: color-get($mau,trang)
+					+pad(.5rem 1.5rem)
+					display: inline-block
+					+bor-rad(20px)
+					background: color-get($mau,main)
+	.owl-nav
+		button
+			&.owl-prev , &.owl-next
+				+pos(abs , 50% null null null)
+				+transform(translateY(-50%))
+				color: color-get($mau,main)
+				+fz(rem(40px))
+				&:hover
+					background: none
+					color: color-get($mau,main)
+				&:focus
+					outline: none
+			&.owl-prev
+				left: 0
+			&.owl-next
+				right: 0
+	+media-breakpoint-up(lg)
+		+pad(4rem null)
+		.item
+			figure
+				.boxzoom
+					img
+						+transition(all .3s ease-in-out)
+			&:hover
+				figure
+					.boxzoom
+						img
+							+transform(scale(1.1))
+		.owl-nav
+			button
+				&.owl-prev
+					left: -4rem
+				&.owl-next
+					right: -4rem

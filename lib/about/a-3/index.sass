@@ -1,0 +1,34 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-about-3
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(7.75rem 0)
+	.advantages
+		.advantages-item
+			margin-top: 2rem
+			+media-breakpoint-up(md)
+				margin-top: 2.25rem
+			+media-breakpoint-up(lg)
+				margin-top: 2.5rem
+			figure
+				margin-bottom: 0
+				+flex-center-center()
+				flex-direction: column
+				.box-zoom
+					+size(rem(103px), rem(103px))
+					+flex-center-center()
+					margin-bottom: .75rem
+				figcaption
+					h2
+						+fz(rem(16px))
+						+fw(500)
+						color: color-get($mau, xam-22)
+						text-align: center
+						+media-breakpoint-up(lg)
+							max-width: 60%
+							margin-left: auto
+							margin-right: auto

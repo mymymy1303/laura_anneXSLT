@@ -1,0 +1,51 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-about-1 , .canhcam-home-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+		padding-bottom: 5rem
+	figure.about-1-logo
+		margin-bottom: rem(40px)
+		padding-bottom: rem(13px)
+		+pos(relative, null)
+		text-align: center
+		&:before
+			+pos(abs, null null 0 50%)
+			content: ''
+			+size(rem(114px), rem(1px))
+			+transform(translateX(-50%))
+			background-color: color-get($mau, xam-20)
+			+media-breakpoint-up(lg)
+				left: calc(50% - .9375rem)
+		img
+			height: rem(31px)
+		+media-breakpoint-up(lg)
+			padding-right: rem(15px)
+	.about-1-content
+		p
+			text-align: justify
+			+fz(rem(15px))
+			+fw(400)
+			color: color-get($mau, den-2)
+			margin-bottom: 0
+			a
+				+fz(rem(15px))
+				+fw(600)
+				color: color-get($mau, main)
+				text-decoration: none
+		+media-breakpoint-up(lg)
+			padding-right: rem(15px)
+	figure.about-1-img
+		+flex-center-center()
+		margin-top: 2rem
+		margin-bottom: 0
+		+media-breakpoint-up(lg)
+			padding-left: rem(15px)
+			height: 100%
+		img
+			max-width: 100%
+			height: auto

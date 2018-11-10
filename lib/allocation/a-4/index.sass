@@ -1,0 +1,112 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-allocation-4
+	padding-bottom: 2rem
+	+media-breakpoint-up(lg)
+		padding-bottom: 4rem
+	.nth-allocation-4-mappreview
+		+pad(.5rem rem(30px))
+		cursor: pointer
+		background-color: color-get($mau, xam-31)
+		border-bottom: 1px solid color-get($mau, xam-30)
+		h3, p
+			color: color-get($mau, xam-3)
+		h3
+			+fz(rem(15px))
+			+fw(700)
+			margin-bottom: .25rem
+		p
+			+fz(rem(13px))
+			+fw(400)
+			margin-bottom: 0
+		+media-breakpoint-up(lg)
+			display: none
+
+	.nth-allocation-4-mapchooser-toggle
+		a
+			display: block
+			height: rem(40px)
+			line-height: rem(40px)
+			text-align: center
+			text-decoration: none
+			background-color: color-get($mau, main)
+			color: color-get($mau, trang)
+			+fz(rem(15px))
+			+fw(700)
+		+media-breakpoint-up(lg)
+			display: none
+
+	+media-breakpoint-up(lg)
+		overflow: hidden
+		.nth-allocation-4-sidemenu
+			width: rem(334px)
+			height: rem(568px)
+			position: static
+			top: 0
+			left: 0
+			background-color: color-get($mau, trang)
+			+transition(.3s ease-in-out)
+			float: left
+			.nth-allocation-3-placechooser
+				+pad(rem(20px) rem(30px))
+				padding-bottom: 14px
+				+size(rem(334px), rem(279px))
+				background-color: color-get($mau,den-3)
+				h2
+					+fz(18px)
+					+fw(500)
+					color: color-get($mau, trang)
+					padding-left: 1rem
+					text-transform: uppercase
+					margin-bottom: 0
+				input[type=submit]
+					padding: 0
+					border: 0
+					outline: none
+					background-color: color-get($mau, main)
+					color: color-get($mau, trang)
+					+size(rem(126px), rem(34px))
+					+bor-rad(rem(17px))
+					margin-top: rem(12px)
+					margin-left: calc((20.875rem - 7.875rem)/2 - 1.875rem)
+					cursor: pointer
+		
+			.nth-allocation-3-mapchooser
+				+fz(0)
+				+no-spacing
+				overflow-y: scroll
+				height: calc(100% - 17.4375rem)
+				&::-webkit-scrollbar
+					width: rem(3px)
+
+				&::-webkit-scrollbar-track
+					background: color-get($mau, trang)
+
+				&::-webkit-scrollbar-thumb
+					background: color-get($mau, main)
+				li
+					+pad(.5rem rem(30px))
+					border-bottom: 1px solid color-get($mau, xam-30)
+					cursor: pointer
+					background-color: color-get($mau, xam-31)
+					h3, p
+						color: color-get($mau, xam-3)
+					h3
+						+fz(rem(15px))
+						+fw(700)
+						margin-bottom: .25rem
+					p
+						+fz(rem(13px))
+						+fw(400)
+						margin-bottom: 0
+					&.mapchooser-active
+						background-color: color-get($mau, trang)
+			&.nth-allocation-3-sidemenu-active
+				left: 0rem
+		.nth-allocation-3-backdrop
+			display: none
+		.nth-allocation-3-closebutton
+			display: none

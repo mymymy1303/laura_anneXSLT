@@ -1,0 +1,17 @@
+extends _layout/layout.pug
+block variables
+	- var title = "news"
+	- var description = "Description for news page"
+	- var bodyclass = "news"
+	- var href = "/news.html"
+block header
+	include ../lib/header/h-1/index.pug
+block body
+	include ../lib/banner/b-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/news/n-1/index.pug
+	include ../lib/news/n-2/index.pug
+	include ../lib/news/n-4/index.pug
+	include ../lib/news/n-5/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

@@ -1,0 +1,38 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+.canhcam-home-1
+	figure.about-1-logo
+		text-align: left
+		margin-bottom: 1.5rem
+		&:before
+			left: 0
+			transform: inherit
+			width: rem(206px)
+			background: #c4c4c4
+	figure.about-1-img
+		margin-top: 0
+	.about-1-content
+		p
+			+lh(30px)
+			margin-bottom: .7rem
+	.about-1-block
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		justify-content: space-between
+		.block-img
+			figure
+				figcaption
+					padding-top: 1rem
+					p
+						margin-bottom: 0
+						color: #5a5a5a
+						+fz(rem(15px))
+						+lh(1.4rem)
+						+fw(500)
+						font-style: italic
+			+media-breakpoint-up(lg)
+				figure
+					margin-bottom: 0

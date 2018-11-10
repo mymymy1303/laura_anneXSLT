@@ -1,0 +1,222 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+.canhcam-contact-1
+	+pad(2rem null)
+	.contact-lists
+		.title
+			text-align: center
+			margin-bottom: rem(38px)
+			h1
+				color: color-get($mau,main)
+				+fz(rem(30px))
+				+fw(400)
+				margin-bottom: rem(14px)
+			p
+				margin-bottom: 0
+				color: #414141
+				+fz(rem(14px))
+				+fw(400)
+		.list-info
+			background: color-get($mau,xam-29)
+			+pad(rem(20px))
+			margin-bottom: 2rem
+			h2
+				color: color-get($mau,main)
+				text-transform: uppercase
+				+fw(500)
+				+fz(rem(20px))
+				margin-bottom: rem(14px)
+				position: relative
+				&:after
+					content: ''
+					width: 100%
+					height: 1px
+					background: color-get($mau,main)
+					+pos(abs , null null rem(-4px) 0)
+				&:before
+					color: color-get($mau,trang)
+					background: color-get($mau,main)
+					+size(rem(30px) , rem(30px))
+					+lh(rem(30px))
+					+bor-rad(50%)
+					+fw(600)
+					margin-right: rem(10px)
+					display: inline-block
+					font-family: 'Font Awesome 5 Free'
+					text-align: center
+			p
+				color: #6f6f6f
+				+fz(rem(14px))
+				+fw(600)
+				margin-bottom: 0
+			.block-info
+				background: color-get($mau,trang)
+				+pad(2rem)
+				margin-bottom: rem(20px)
+				&:first-child
+					h2
+						&:before
+							content: '\f3c5'
+				&:nth-child(2)
+					h2
+						&:before
+							content: '\f0e0'
+				&:last-child
+					margin-bottom: 0
+					h2
+						&:before
+							content: '\f017'
+	+media-breakpoint-up(lg)
+		+pad(4rem null)
+		.contact-lists
+			.list-info
+				overflow: hidden
+				+pad(null 3.5rem null 8.5rem)
+				margin-bottom: 0
+				h2
+					&:after
+						left: -6rem
+						width: 15rem
+					&:before
+						+bor-rad(0)
+						border-top-right-radius: 22px
+						border-bottom-right-radius: 22px
+						height: rem(44px)
+						+lh(rem(44px))
+						padding-right: 1rem
+						margin-right: 0
+						text-align: right
+						width: 15rem
+						+pos(abs , 3px null null -17rem)
+						+fz(rem(26px))
+						z-index: 1
+				.block-info
+					+pad(1.5rem 1.5rem 1.5rem 6rem)
+	.wrap-form
+		position: relative
+		> div
+			display: flex
+			flex-wrap: wrap
+			.form-group
+				width: 100%
+				input , textarea
+					display: block
+					width: 100%
+					font-size: 1rem
+					line-height: 1.5
+					color: #495057
+					border-radius: 0.25rem
+					-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					border: none
+					+pad(.9rem .9rem)
+					background: color-get($mau, xam-29)
+					+placeholder
+						color: #808080
+						+fz(rem(14px))
+						+fw(400)
+				&.qparagraph
+					textarea
+						width: 100%
+						height: rem(275px)
+		.frm-captcha
+			display: flex
+			align-items: center
+			.frm-captcha-input
+				+pad(null 15px)
+				order: 1
+				label
+					display: none
+				input
+					display: block
+					width: 100%
+					font-size: 1rem
+					line-height: 1.5
+					color: #495057
+					border-radius: 0.25rem
+					-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					border: none
+					+pad(.9rem .9rem)
+					background: color-get($mau, xam-29)
+					+placeholder
+						color: #808080
+						+fz(rem(14px))
+						+fw(400)
+			.RadCaptcha_Default
+				width: auto!important
+		.frm-btnwrap
+			width: 109px
+			height: 46px
+			+bor-rad(23px)
+			background: color-get($mau,main)
+			+flex-center-center()
+			cursor: pointer
+			label
+				display: none
+			.frm-btn
+				background: url('./../img/contact/email.png') center
+				width: 30px
+				height: 30px
+				input[type="reset"]
+					display: none
+				input[type="submit"]
+					+pad(0)
+					margin-top: 1rem
+					color: white
+					border: none
+					color: color-get($mau,trang)
+					+fz(0)
+					// width: 50%
+		+media-breakpoint-up(lg)
+			position: relative
+			> div
+				.form-group
+					width: 50%
+					+pad(null 15px)
+					&.qparagraph
+						width: 100%
+						padding-left: 0
+						padding-right: 0
+					&:nth-child(2n+1)
+						padding-left: 0
+					&:nth-child(2n)
+						padding-right: 0
+			.frm-btnwrap
+				// +pos(abs , null 15px -4.5rem null)
+				margin-left: auto
+
+#ctl00_mainContent_ctl07_captcha_CaptchaLinkButton
+	i, em
+		+fz(rem(30px))
+		color: #9d907f
+		margin-left: .5rem
+		margin-right: .5rem
+#ctl00_mainContent_ctl07_divCaptcha
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	.frm-captcha-input
+		padding-left: 0
+		padding-right: 0
+		flex: 0 0 calc(100% - 14.125rem)
+	#ctl00_mainContent_ctl07_captcha
+		flex: 0 0 14.125rem
+		margin-bottom: 0
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		align-items: flex-start
+		.frm-captcha-input, #ctl00_mainContent_ctl07_captcha
+			flex: 0 0 100%
+		.frm-captcha-input
+			width: 100%
+		#ctl00_mainContent_ctl07_captcha
+			margin-bottom: .75rem
+#ctl00_mainContent_ctl07_captcha_ctl01
+	+flex-center-center()

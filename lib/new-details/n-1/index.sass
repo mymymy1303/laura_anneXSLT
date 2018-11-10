@@ -1,0 +1,98 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+$xam-30: #414141
+.canhcam-new-detail-1
+	+pad(2rem null)
+	img
+		width: 100%
+	.new-lists
+		h1
+			+fz(rem(30px))
+			color: color-get($mau,main)
+			+fw(500)
+			margin-bottom: rem(9px)
+		time
+			display: block
+			color: color-get($mau,xam-17)
+			+fz(rem(14px))
+			+fw(300)
+			margin-bottom: rem(20px)
+			.far
+				margin-right: rem(7px)
+		.news-read
+			p
+				color: color-get($mau,den-1)
+				+fz(rem(14px))
+				+fw(400)
+				margin-bottom: rem(12px)
+				&.italic
+					font-style: italic
+					color: $xam-30
+			img
+				margin-bottom: 1rem
+			h2
+				color: color-get($mau,den-1)
+				text-transform: uppercase
+				+fw(500)
+				margin-top: rem(24px)
+				margin-bottom: rem(15px)
+		.social-networks
+			margin-bottom: 2rem
+			.nav-item
+				margin-right: rem(7px)
+				&:last-child
+					margin-right: 0
+	.othernews
+		.lists
+			h2
+				color: color-get($mau,main)
+				text-transform: uppercase
+				+fz(rem(18px))
+				+fw(600)
+				padding-bottom: rem(15px)
+				+box-sha(inset 0 -1px 0 0 color-get($mau,main))
+				margin-bottom: rem(17px)
+			.item
+				text-decoration: none
+				display: block
+				padding-bottom: rem(17px)
+				figure
+					margin-bottom: 0
+					figcaption
+						padding-top: .8rem
+						p
+							color: color-get($mau,xam-23)
+							+fz(rem(13px))
+							margin-bottom: 0
+							+fw(600)
+				&:last-child
+					padding-bottom: 0
+			&.list-relate
+				margin-top: 2rem
+	+media-breakpoint-up(lg)
+		.new-lists
+			.social-networks
+				margin-bottom: 0
+		.othernews
+			.lists
+				.item
+					figure
+						display: flex
+						align-items: center
+						position: relative
+						min-height: 85px
+						.thumb
+							display: block
+							height: 100%
+							+pos(abs, 0 null null 0)
+							width: 48%
+							max-width: 48%
+						img
+							display: none
+						figcaption
+							padding-top: 0
+							+pad(0 0 0 calc(45% + 1rem))
+				&.list-relate
+					margin-top: rem(65px)

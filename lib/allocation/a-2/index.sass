@@ -1,0 +1,47 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-allocation-2
+	overflow: hidden
+	padding-bottom: rem(40px)
+	.owl-carousel.owl-theme
+		.owl-nav
+			+flex-center-center()
+			button
+				outline: none
+				margin: 0
+				+size(2rem, 2rem)
+				+flex-center-center()
+				&:active, &:focus
+					box-shadow: 0
+				i, em
+					display: block
+					cursor: pointer
+					+media-breakpoint-up(lg)
+						+fz(rem(30px))
+			+media-breakpoint-up(lg)
+				+pos(abs, 50% null null rem(-24px))
+				z-index: 1
+				+transform(translateY(-50%))
+				margin-top: 0
+				width: calc(100% + 3rem)
+				justify-content: space-between
+				button
+					width: auto
+					height: auto
+				button.disabled
+					opacity: 0
+		.allocation-item
+			+size(rem(200px), rem(130px))
+			+flex-center-center()
+			margin-left: auto
+			margin-right: auto
+			background-color: color-get($mau, xam-25)
+			margin-bottom: rem(15px)
+			&:last-child
+				margin-bottom: 0
+			img
+				object-fit: none
+				width: initial

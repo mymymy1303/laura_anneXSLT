@@ -1,0 +1,166 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-faq-2
+	padding-bottom: 2rem
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+		padding-top: 2rem
+	.nth-faq-2-title
+		+fz(rem(30px))
+		+fw(600)
+		color: color-get($mau, main)
+		text-transform: uppercase
+		margin-bottom: 1.25rem
+		text-align: center
+		+media-breakpoint-up(lg)
+			text-align: left
+	.accordion
+		border: 0
+		.card
+			border: 0
+			margin-bottom: rem(10px)
+			&:last-child
+				margin-bottom: 0
+			.card-header
+				border-radius: 0
+				border-bottom: 0
+				padding: 0
+				outline: none
+				+pad(rem(15px), 1.25rem)
+				border: 0
+				width: 100%
+				+fz(15px)
+				text-align: left
+				border-radius: 0
+				white-space: normal
+				color: color-get($mau, den-1)
+				background-color: color-get($mau, xam-28)
+				+fw(500)
+				cursor: pointer
+				&.collapsed
+					color: color-get($mau, den-1)
+					background-color: color-get($mau, xam-28)
+					+fw(500)
+				&:not(.collapsed)
+					color: color-get($mau, trang)
+					background-color: color-get($mau, main)
+					+fw(600)
+				i, em
+					display: none
+				+media-breakpoint-up(lg)
+					display: flex
+					justify-content: space-between
+					align-items: center
+					i, em
+						display: block
+						+fz(rem(18px))
+			.card-body
+				background-color: color-get($mau, xam-28)
+				p
+					margin-bottom: 0
+					+fz(rem(14px))
+					color: color-get($mau, den-1)
+
+	.nth-faq-form
+		margin-top: 2rem
+		background-color: color-get($mau, trang)
+		+box-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.18))
+		+pad(rem(15px) rem(15px))
+		+media-breakpoint-up(md)
+			+pad(rem(30px) rem(60px))
+		.nth-faq-form-title
+			+fz(rem(30px))
+			+fw(600)
+			color: color-get($mau, main)
+			text-transform: uppercase
+			text-align: center
+		input[type=text], input
+			width: 100%
+			border-width: 1px
+			border-color: color-get($mau, xam-11)
+			border-style: solid
+			border-radius: 3px
+			background-color: color-get($mau, xam-29)
+			height: rem(45px)
+			+fz(rem(13px))
+			padding-left: rem(16px)
+			margin-top: rem(20px)
+		textarea
+			width: 100%
+			border-width: 1px
+			border-color: color-get($mau, xam-11)
+			border-style: solid
+			border-radius: 3px
+			background-color: color-get($mau, xam-29)
+			+fz(rem(13px))
+			padding-left: rem(16px)
+			padding-top: rem(15px)
+			margin-top: rem(20px)
+
+		input[type=submit]
+			color: color-get($mau, trang)
+			background-color: color-get($mau, main)
+			text-transform: uppercase
+			text-align: center
+			+size(rem(150px), rem(40px))
+			line-height: rem(40px)
+			+bor-rad(rem(20px))
+			padding: 0
+			+fz(rem(16px))
+			+fw(700)
+			margin-left: calc((100% - 9.375rem)/2)
+	+media-breakpoint-up(lg)
+		.nth-faq-title
+			+fz(rem(18px))
+			+fw(500)
+			color: color-get($mau, main)
+			text-transform: uppercase
+			line-height: rem(24px)
+			margin-bottom: 1rem
+			margin-top: .6rem
+		.nth-faq-nav
+			display: flex
+			flex-direction: column
+			margin-top: 1.4rem
+			a
+				background-color: color-get($mau, xam-2)
+				color: color-get($mau, xam-27)
+				+fz(rem(14px))
+				+fw(500)
+				text-transform: uppercase
+				text-decoration: none
+				height: rem(30px)
+				line-height: rem(30px)
+				border-top-right-radius: rem(30px)
+				border-bottom-right-radius: rem(30px)
+				padding-left: rem(30px)
+				max-width: rem(210px)
+				&.nth-faq-nav-active
+					background-color: color-get($mau, main)
+					color: color-get($mau, trang)
+
+.laura-anne-faq
+	.modulepager
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 1.5rem
+		+media-breakpoint-up(lg)
+			width: 75%
+			margin-left: 25%
+	.frm-btn-reset
+		display: none
+	.frm-btn
+		width: 100%
+		display: flex
+		justify-content: center
+		input[type=submit]
+			margin: 0
+	.form-group.frm-btnwrap
+		margin-bottom: 0
+		width: 100%
+	textarea
+		height: 10rem

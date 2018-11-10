@@ -1,0 +1,168 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-footer-1
+	a
+		text-decoration: none
+	.footer-subscribe
+		+pad(2rem 0)
+		+media-breakpoint-up(lg)
+			+pad(1rem 0)
+		+size(100%, auto)
+		background-color: color-get($mau, xam-18)
+		.footer-subscribe-wrapper
+			+flex-center-center()
+			+size(100%, auto)
+			flex-direction: column
+			.footer-promotion
+				margin-bottom: 1rem
+				color: color-get($mau, main)
+				+fz(rem(18px))
+				+fw(400)
+				text-transform: uppercase
+				text-decoration: none
+			.subscribe-form
+				margin-bottom: 1rem
+				+pos(relative, null)
+				input
+					border: 0
+					outline: none
+					box-shadow: 0
+					background-color: color-get($mau, xam-19)
+					+size(100%, rem(40px))
+					line-height: 40px
+					+no-spacing
+					padding-left: 1rem
+					padding-right: rem(116px)
+					+bor-rad(rem(20px))
+				button
+					+pos(abs, 0 0 null null)
+					border: 0
+					outline: none
+					box-shadow: 0
+					background-color: color-get($mau, main)
+					+size(rem(100px), 100%)
+					border-top-right-radius: rem(20px)
+					border-bottom-right-radius: rem(20px)
+					color: color-get($mau, trang)
+					+fz(14px)
+					+fw(400)
+					cursor: pointer
+			.social-links
+				+size(100%, auto)
+				+flex-center-center()
+				.social-follow
+					color: color-get($mau, main)
+					+fz(rem(18px))
+					+fw(400)
+					text-transform: uppercase
+					text-decoration: none
+					padding-right: rem(24px)
+				.social-button
+					+fz(rem(18px))
+					color: color-get($mau, main)
+					padding-right: rem(24px)
+					&:last-child
+						padding-right: 0
+			+media-breakpoint-up(md)
+				flex-direction: row
+				flex-wrap: wrap
+				justify-content: center
+				align-items: center
+				.footer-promotion
+					flex: 0 0 50%
+					max-width: 50%
+					height: rem(40px)
+					line-height: rem(40px)
+					text-align: center
+				.subscribe-form
+					flex: 0 0 50%
+					max-width: 50%
+				.social-links
+					flex: 0 0 100%
+					max-width: 100%
+			+media-breakpoint-up(lg)
+				flex-direction: row
+				.footer-promotion
+					flex: 0 0 25%
+					max-width: 25%
+					height: rem(40px)
+					line-height: rem(40px)
+					margin-bottom: 0
+					text-align: left
+				.subscribe-form
+					flex: 0 0 calc(100% - 25% - 33.3333%)
+					max-width: calc(100% - 25% - 33.3333%)
+					margin-bottom: 0
+				.social-links
+					flex: 0 0 33.3333%
+					max-width: 33.3333%
+
+	.footer-navigator
+		+pad(2rem 0)
+		+media-breakpoint-up(lg)
+			+pad(4rem 0)
+			padding-bottom: 0
+		.footer-nav
+			text-align: center
+			+media-breakpoint-up(md)
+				text-align: left
+			+media-breakpoint-up(lg)
+				padding-bottom: rem(84px)
+			.footer-nav-item
+				margin-top: 3rem
+				&:first-child
+					margin-top: 0
+				+media-breakpoint-up(md)
+					&:nth-child(2)
+						margin-top: 0
+				+media-breakpoint-up(lg)
+					margin-top: 0
+			.footer-nav-title
+				+no-spacing
+				+fz(rem(16px))
+				+fw(600)
+				color: color-get($mau, trang)
+				text-transform: uppercase
+				margin-bottom: rem(28px)
+				display: block
+				line-height: rem(24px)
+			.footer-nav-links
+				display: block
+				color: color-get($mau, trang)
+				+fz(rem(14px))
+				+fw(400)
+				margin-bottom: 1rem
+				text-decoration: none
+				&:last-child
+					margin-bottom: 0
+				+media-breakpoint-up(lg)
+					margin-bottom: 0.5rem
+		.footer-copyright
+			+fz(rem(14px))
+			+fw(400)
+			color: color-get($mau, trang)
+			text-align: center
+			p
+				margin-bottom: 0
+				margin-top: 4rem
+				+pos(relative, null)
+				&:before
+					background-color: #465874
+					height: rem(1px)
+					width: 100%
+					+pos(abs, -2rem 0 null null)
+					content: ''
+				a
+					+fz(rem(14px))
+					+fw(400)
+					color: color-get($mau, trang)
+					text-decoration: none
+				+media-breakpoint-up(lg)
+					margin-top: 0
+					height: rem(43px)
+					line-height: rem(43px)
+					&:before
+						top: 0

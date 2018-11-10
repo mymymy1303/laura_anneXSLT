@@ -1,0 +1,15 @@
+extends _layout/layout.pug
+block variables
+	- var title = "faq"
+	- var description = "Description for faq page"
+	- var bodyclass = "faq"
+	- var href = "/faq.html"
+block header
+	include ../lib/header/h-1/index.pug
+block body
+	include ../lib/banner/b-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/faq/f-1/index.pug
+	include ../lib/faq/f-2/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

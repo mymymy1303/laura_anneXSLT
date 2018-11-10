@@ -1,0 +1,42 @@
+section.nth-faq-2
+	.container
+		.row
+			.col-12.col-lg-3
+				#accordionSideMenu
+			.col-12.col-lg-9
+				h1.nth-faq-2-title hỏi đáp
+				#accordionFAQ.accordion
+					.card
+						#heading-1.card-header(data-toggle='collapse', data-target='#collapse-1', aria-expanded='true', aria-controls='collapse-1')
+							h3.mb-0 Collapsible Group Item #1 Group Item #1 Collapsible Group Item #1
+							i.lnr.lnr-plus-circle
+						#collapse-1.collapse(aria-labelledby='heading-1', data-parent='#accordionFAQ')
+							.card-body
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					.card
+						#heading-2.card-header(data-toggle='collapse', data-target='#collapse-2', aria-expanded='true', aria-controls='collapse-2')
+							h3.mb-0 Collapsible Group Item #2 Group Item #2 Collapsible Group Item #2
+							i.lnr.lnr-plus-circle
+						#collapse-2.collapse(aria-labelledby='heading-1', data-parent='#accordionFAQ')
+							.card-body
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		
+		.row
+			.col-12.col-lg-9.offset-lg-3
+				.nth-faq-form
+					h2.nth-faq-form-title gửi câu hỏi
+					form.wrap-form
+						.row
+							.col-12.col-md-6
+								input(type="text" placeholder="Họ và tên*..." required)
+							.col-12.col-md-6
+								input(type="text" placeholder="Email*...")
+							.col-12.col-md-6
+								input(type="text" placeholder="Tiêu đề*...")
+							.col-12.col-md-6
+								input(type="text" placeholder="Số điện thoại*...")
+							.col-12
+								textarea(placeholder="Nội dung*..." rows="6")
+							.col-12
+								input(type="submit" value="Gửi")
+

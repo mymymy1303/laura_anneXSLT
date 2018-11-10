@@ -1,0 +1,301 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+
+.nth-product-2
+	padding-top: rem(42px)
+	padding-bottom: rem(42px)
+	.nth-product-2-sidemenu-togglebutton
+		position: fixed
+		z-index: 888
+		+size(100%, rem(30px))
+		background-color: color-get($mau, trang)
+		border-top: rem(1px) solid color-get($mau, xam-2)
+		+flex-center-center()
+		bottom: 0
+		color: color-get($mau, main)
+		+fz(rem(15px))
+		text-transform: uppercase
+		+fw(600)
+		cursor: pointer
+		i, em
+			margin-right: .5rem
+		+media-breakpoint-up(lg)
+			display: none
+
+	.nth-product-2-intro
+		+flex-center-center()
+		flex-direction: column
+		+media-breakpoint-up(md)
+			flex-direction: row
+			justify-content: space-between
+		.nth-product-2-title
+			+fz(rem(30px))
+			+fw(600)
+			color: color-get($mau, main)
+			margin-bottom: 0.75rem
+		select
+			+fz(12px)
+			+size(rem(130px), rem(30px))
+			margin-top: 0
+
+	a
+		text-decoration: none
+		.product
+			.box-zoom
+				+pos(relative, null)
+				width: 100%
+				background-color: color-get($mau, xam-2)
+				+flex-center-center()
+				height: rem(340px)
+				+transition(.3s ease-in-out)
+				padding-left: 2rem
+				padding-right: 2rem
+				&:before
+					+size(100%)
+					+pos(abs, 0 0 null null)
+					content: ''
+					background-color: rgba(0, 0, 0, .45)
+					opacity: 0
+					+transition(.3s ease-in-out)
+				img
+					max-width: 100%
+					height: auto
+			figcaption
+				+flex-center-center()
+				flex-direction: column
+				.product-brand
+					+fz(rem(15px))
+					+fw(400)
+					color: color-get($mau, den-1)
+					text-transform: uppercase
+					margin-bottom: 0
+					margin-top: rem(20px)
+				.product-name
+					+fz(rem(13px))
+					+fw(700)
+					color: color-get($mau, den-1)
+					text-transform: uppercase
+					margin-top: .4rem
+					margin-bottom: rem(20px)
+				.product-price
+					+size(rem(150px), rem(40px))
+					+bor-rad(rem(20px))
+					background-color: color-get($mau, main)
+					color: color-get($mau, trang)
+					text-align: center
+					+fz(rem(20px))
+					+fw(600)
+					line-height: rem(40px)
+
+		&:hover, &:active, &:focus
+			.product
+				.box-zoom
+					&:before
+						opacity: 1
+
+	.nth-product-filter-sidemenu
+		position: static
+		background-color: color-get($mau, aqua)
+		height: 100%
+		max-width: rem(266px)
+		width: 100%
+		overflow-y: scroll
+		+transition(.3s ease-in-out)
+		&::-webkit-scrollbar
+			width: rem(3px)
+
+		&::-webkit-scrollbar-track
+			background: color-get($mau, trang)
+
+		&::-webkit-scrollbar-thumb
+			background: color-get($mau, main)
+
+		h2
+			color: color-get($mau, main)
+			+fz(rem(18px))
+			+fw(500)
+			line-height: rem(24px)
+			margin-bottom: 1.175rem
+			text-transform: uppercase
+		.product-filter-categories-wrapper
+			margin-bottom: rem(47px)
+			.product-filter-categories
+				margin: 0
+				padding: 0
+				list-style: none
+				margin-top: .5rem
+				li.main-categories
+					+pos(relative, null)
+					+size(100%, rem(30px))
+					max-width: rem(236px)
+					border-top-right-radius: rem(15px)
+					border-bottom-right-radius: rem(15px)
+					.product-categories-title
+						display: block
+						+size(100%, rem(30px))
+						max-width: rem(236px)
+						border-top-right-radius: rem(15px)
+						border-bottom-right-radius: rem(15px)
+						line-height: rem(30px)
+						padding-left: rem(28px)
+						background-color: color-get($mau, xam-2)
+						color: color-get($mau, xam-27)
+						+fz(rem(14px))
+						+fw(500)
+						text-transform: uppercase
+						text-decoration: none
+						+transition(.3s ease-in-out)
+					.product-categories-toggle-button
+						+pos(abs, 0 0 null null)
+						+size(50%, rem(30px))
+						line-height: rem(30px)
+						color: color-get($mau, xam-32)
+						border-top-right-radius: rem(15px)
+						border-bottom-right-radius: rem(15px)
+						text-align: right
+						padding-right: rem(20px)
+						+fz(rem(10px))
+						cursor: pointer
+						+transition(.3s ease-in-out)
+
+				li.sub-categories
+					+transition(.3s ease-in-out)
+					padding-left: rem(12px)
+					+size(100%, rem(30px))
+					max-width: rem(236px)
+					border-top-right-radius: rem(15px)
+					border-bottom-right-radius: rem(15px)
+					+pos(relative, null)
+					line-height: rem(30px)
+					overflow: hidden
+					height: 0
+					i, em
+						color-get($mau, xam-33)
+						+fz(rem(10px))
+						margin-right: rem(6px)
+					.product-categories-sub
+						+fz(rem(12px))
+						color: color-get($mau, xam-33)
+						text-transform: uppercase
+						// +pos(abs, 0 null null rem(28px))
+						// +size(rem(236px), rem(30px))
+						// line-height: rem(30px)
+						// text-decoration: none
+
+				&.product-filter-categories-active
+					li.main-categories
+						.product-categories-title
+							background-color: color-get($mau, main)
+							color: color-get($mau, trang)
+						.product-categories-toggle-button
+							color: color-get($mau, trang)
+							+transform(rotateX(180deg))
+					li.sub-categories
+						height: rem(30px)
+
+		.product-filter
+			+pad(rem(35px) rem(28px))
+			+size(100%, auto)
+			max-width: rem(236px)
+			background-color: color-get($mau, xam-2)
+			+pos(relative, null)
+			overflow: hidden
+			.product-filter-main-title
+				display: flex
+				align-items: center
+				justify-content: space-between
+				h3
+					+fz(rem(18px))
+					+fw(700)
+					color: color-get($mau, den-1)
+					text-transform: uppercase
+					margin-bottom: 0
+					line-height: rem(24px)
+				.product-filter-toggle-button
+					+size(rem(24px))
+					+pos(relative, null)
+					cursor: pointer
+					.product-filter-toggle-button-vertical-line
+						+size(rem(1px), rem(16px))
+						+pos(abs, 0.25rem null null 0.71rem)
+						background-color: color-get($mau, den-1)
+						+transition(.3s ease-in-out)
+						&.product-filter-toggle-button-vertical-line-active
+							+transform(rotate(-90deg))
+					.product-filter-toggle-button-horizontal-line
+						+size(rem(16px), rem(1px))
+						+pos(abs,0.71875rem null null 0.25rem)
+						background-color: color-get($mau, den-1)
+
+
+			.product-filter-attribute-wrapper
+				height: 0
+				overflow: hidden
+				+transition(.3s ease-in-out)
+				&.product-filter-attribute-wrapper-active
+					height: rem(504.8px)
+				.product-filter-attribute
+					margin-top: 1.5rem
+					.product-filter-attribute-title
+						+fz(rem(14px))
+						+fw(500)
+						color: color-get($mau, den-1)
+						text-transform: uppercase
+					.product-filter-attribute-item
+						.product-filter-attribute-option
+							a
+								display: block
+								+pos(relative, null)
+								+fz(13px)
+								+fw(400)
+								height: 1.5rem
+								line-height: 1.5rem
+								color: color-get($mau, den-1)
+								padding-left: rem(20px)
+								&:before
+								&:after
+									+size(rem(9px))
+									content: ''
+									+pos(abs, 50% null null 0)
+									+box-shadow(inset 0 0 0 1px color-get($mau, xam-34))
+									+transform(translateY(-50%))
+
+					.priceRangeToolTips
+						color: color-get($mau, den-1)
+						+fz(rem(11px))
+						+fw(500)
+						margin-top: .3rem
+						span
+							color: color-get($mau, main)
+
+					.slider.slider-horizontal
+						+size(rem(151px), rem(2px))
+						.slider-track
+							+size(rem(151px), rem(2px))
+							background-image: none
+							background-repeat: no-repeat
+							box-shadow: none
+							margin-top: 0
+							.slider-track-low, .slider-track-high
+								height: rem(2px)
+								background-color: color-get($mau, xam-19)
+							.slider-selection
+								background-color: color-get($mau, main)
+								height: 2px
+								background-image: none
+								background-repeat: no-repeat
+								box-shadow: none
+								margin-top: 0
+						.slider-handle
+							box-shadow: none
+							+size(rem(10px))
+							background-color: color-get($mau, main)
+							background-image: none
+							margin-left: rem(-5px)
+							top: rem(-3px)
+
+		.product-filter-sidemenu-close-button
+			display: none

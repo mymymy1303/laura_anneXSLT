@@ -1,0 +1,57 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-ordersupport-2
+	padding-bottom: 2rem
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+		padding-top: 2rem
+	.nth-ordersupport-2-title
+		+fz(rem(30px))
+		+fw(600)
+		color: color-get($mau, main)
+		text-transform: uppercase
+		margin-bottom: 1.25rem
+		text-align: center
+		+media-breakpoint-up(lg)
+			text-align: left
+	.nth-ordersupport-2-content
+		p
+			margin-bottom: 0
+			+fw(400)
+			+fz(rem(14px))
+		h3
+			+fw(700)
+			+fz(rem(14px))
+
+	+media-breakpoint-up(lg)
+		.nth-ordersupport-title
+			+fz(rem(18px))
+			+fw(500)
+			color: color-get($mau, main)
+			text-transform: uppercase
+			line-height: rem(24px)
+			margin-bottom: 1rem
+			margin-top: .6rem
+		.nth-ordersupport-nav
+			display: flex
+			flex-direction: column
+			margin-top: 1.4rem
+			a
+				background-color: color-get($mau, xam-2)
+				color: color-get($mau, xam-27)
+				+fz(rem(14px))
+				+fw(500)
+				text-transform: uppercase
+				text-decoration: none
+				height: rem(30px)
+				line-height: rem(30px)
+				border-top-right-radius: rem(30px)
+				border-bottom-right-radius: rem(30px)
+				padding-left: rem(30px)
+				max-width: rem(210px)
+				&.nth-ordersupport-nav-active
+					background-color: color-get($mau, main)
+					color: color-get($mau, trang)

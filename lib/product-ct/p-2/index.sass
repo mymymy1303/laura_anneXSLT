@@ -1,0 +1,46 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-product-ct-2
+	padding-top: rem(48px)
+	.tabs
+		.tabs-header
+			ul
+				+no-spacing()
+				font-size: 0
+				+flex-center-center()
+				flex-direction: column
+				+media-breakpoint-up(sm)
+					flex-direction: row
+				li
+					display: inline-block
+					margin-bottom: 2px
+					a
+						display: block
+						height: 3rem
+						width: rem(240px)
+						+fz(1rem)
+						text-transform: uppercase
+						color: color-get($mau, den-1)
+						background-color: color-get($mau, xam-2)
+						line-height: 3rem
+						text-align: center
+						text-decoration: none
+						+transition(.3s ease-in-out)
+						&:hover
+							background-color: color-get($mau, trang)
+							color: color-get($mau, main)
+							+box-shadow(inset 0 0 0 1px color-get($mau, main))
+						+media-breakpoint-up(md)
+							width: rem(270px)
+					&.tabs-active
+						a
+							color: color-get($mau, main)
+							+pos(relative, null)
+							&:before
+								+pos(abs, null null -2px 15%)
+								content: ''
+								+size(70%, 2px)
+								background-color: color-get($mau, main)

@@ -1,0 +1,59 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+.canhcam-home-5
+	+pad(2rem null)
+	.home-lists
+		h2
+			color: color-get($mau,main)
+			+fz(rem(36px))
+			+fw(400)
+			margin-bottom: rem(46px)
+			text-align: center
+		.item
+			a
+				text-decoration: none
+			figure
+				margin-bottom: 1.5rem
+				.boxzoom
+					img
+						width: 100%
+				figcaption
+					padding-top: rem(18px)
+					time
+						display: block
+						color: color-get($mau,xam-4)
+						+fz(rem(15px))
+						+fw(400)
+						margin-bottom: rem(15px)
+					h3
+						margin-bottom: 0
+						color: color-get($mau,den-1)
+						+fw(500)
+						+fz(16px)
+						+text-clamp(2)
+			&:last-child
+				figure
+					margin-bottom: 0
+	+media-breakpoint-up(lg)
+		+pad(4rem null)
+		.home-lists
+			.item
+				figure
+					margin-bottom: 0
+					.boxzoom
+						overflow: hidden
+						img
+							+transition(all .3s ease-in-out)
+					figcaption
+						h3
+							+transition(all .3s ease-in-out)
+				&:hover
+					figure
+						.boxzoom
+							img
+								+transform(scale(1.2))
+						figcaption
+							h3
+								color: color-get($mau,main)

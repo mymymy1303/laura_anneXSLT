@@ -1,0 +1,42 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+section.nth-ordersupport-1
+	padding-top: 2rem
+	position: sticky
+	top: -2.11rem
+	z-index: 10
+	+media-breakpoint-up(lg)
+		display: none
+	.nth-ordersupport-title
+		+fz(rem(18px))
+		+fw(500)
+		color: color-get($mau, main)
+		text-transform: uppercase
+		margin-bottom: 0
+		text-align: center
+		margin-bottom: rem(20px)
+		line-height: rem(24px)
+	.nth-ordersupport-nav
+		margin-left: auto
+		margin-right: auto
+		+flex-center-center()
+		+size(rem(290px), rem(30px))
+		background-color: color-get($mau, xam-2)
+		margin-bottom: rem(30px)
+		a
+			flex: 0 0 50%
+			max-width: 100%
+			height: 100%
+			line-height: rem(30px)
+			text-align: center
+			color: color-get($mau, xam-27)
+			+fz(rem(14px))
+			+fw(500)
+			text-transform: uppercase
+			text-decoration: none
+			&.nth-ordersupport-nav-active
+				background-color: color-get($mau, main)
+				color: color-get($mau, trang)

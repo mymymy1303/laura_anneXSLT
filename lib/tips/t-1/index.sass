@@ -1,0 +1,24 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-tips-1
+	padding-top: 2rem
+	padding-bottom: 1.5rem
+	+media-breakpoint-up(lg)
+		padding-top: 4rem
+	.nth-tips-title
+		margin-bottom: 0
+		padding-bottom: rem(10px)
+		+fz(rem(30px))
+		+fw(400)
+		color: color-get($mau, main)
+		text-align: center
+		+pos(relative, null)
+		&:before
+			+pos(abs, null null 0 50%)
+			content: ''
+			+transform(translateX(-50%))
+			+size(rem(45px), rem(2px))
+			background-color: color-get($mau, main)

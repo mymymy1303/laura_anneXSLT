@@ -1,0 +1,74 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-gallery-7
+	padding-bottom: rem(30px)
+	a
+		text-decoration: none
+	figure.gallery.main-gallery
+		margin-top: 0
+		+media-breakpoint-up(lg)
+			height: 100%
+			figcaption
+				+pad(rem(20px) rem(40px))
+				h3
+					+fz(rem(20px))
+				p
+					display: block
+					+fz(rem(14px))
+	figure.gallery
+		margin-bottom: 0
+		margin-top: rem(43px)
+		background-color: color-get($mau, xam-25)
+		.box-zoom
+			+pos(relative, null)
+			overflow: hidden
+			&:before
+				+pos(abs, 0 0 null null)
+				+size(100%)
+				content: ''
+				background-color: rgba(0, 0, 0, .15)
+				z-index: 1
+			img
+				max-width: 100%
+				height: auto
+				+transition(.3s ease-in-out)
+			i, em
+				+pos(abs, 50% null null 50%)
+				color: color-get($mau, trang)
+				+fz(rem(50px))
+				+transform(translate(-50%, -50%))
+				z-index: 2
+		+media-breakpoint-up(lg)
+			margin-top: 0
+			&:hover
+				img
+					+transform(scale(1.2))
+		figcaption
+			+pad(rem(20px) rem(20px))
+			h3
+				+fz(1rem)
+				+fw(600)
+				color: color-get($mau, xam-26)
+				margin-bottom: .9rem
+				+media-breakpoint-up(lg)
+					+fz(rem(15px))
+					+text-clamp(3)
+	.gallery-first-row
+		+media-breakpoint-up(lg)
+			figure.gallery
+				margin-top: 0
+	
+	.nth-gallery-7-wrapper
+		+media-breakpoint-down(md)
+			.col-12.col-md-6.col-lg-3
+				&:first-child, &:nth-child(2)
+					figure
+						margin-top: 0
+		+media-breakpoint-down(sm)
+			.col-12.col-md-6.col-lg-3
+				&:nth-child(2)
+					figure
+						margin-top: rem(43px)

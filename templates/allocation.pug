@@ -1,0 +1,17 @@
+extends _layout/layout.pug
+block variables
+	- var title = "allocation"
+	- var description = "Description for allocation page"
+	- var bodyclass = "allocation"
+	- var href = "/allocation.html"
+block header
+	include ../lib/header/h-1/index.pug
+block body
+	include ../lib/banner/b-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/allocation/a-1/index.pug
+	include ../lib/allocation/a-2/index.pug
+	include ../lib/allocation/a-3/index.pug
+	include ../lib/allocation/a-4/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

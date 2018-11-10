@@ -1,0 +1,63 @@
+{
+	"SETUP": {
+		"index": {
+			"header": [
+				"header/h-1"
+			],
+			"body": [
+				"banner/b-1",
+				"breadcrumb/b-1",
+				"about/a-1",
+				"about/a-2",
+				"about/a-3",
+				"tips/t-1",
+				"tips/t-2",
+				"tips/t-3",
+				"tips/t-4",
+				"tips/t-5",
+				"tips/t-6",
+				"tips/t-7",
+				"tips/t-8",
+				"gallery/g-1",
+				"gallery/g-2",
+				"gallery/g-3",
+				"gallery/g-4",
+				"gallery/g-5",
+				"gallery/g-6",
+				"gallery/g-7",
+				"gallery/g-8",
+				"faq/f-1",
+				"faq/f-2",
+				"new-details/n-1",
+				"contact/c-1",
+				"home/h-1",
+				"home/h-2",
+				"home/h-3",
+				"home/h-4",
+				"home/h-5",
+				"ordersupport/o-1",
+				"ordersupport/o-2",
+				"allocation/a-1",
+				"allocation/a-2",
+				"allocation/a-3",
+				"allocation/a-4",
+				"product/p-1",
+				"product/p-2",
+				"product-ct/p-1",
+				"product-ct/p-2",
+				"product-ct/p-3",
+				"product-ct/p-4",
+				"product-ct/p-5",
+				"product-ct/p-6",
+				"product-ct/p-7",
+				"news/n-1",
+				"news/n-2",
+				"news/n-4",
+				"news/n-5"
+			],
+			"footer": [
+				"footer/f-1"
+			]
+		}
+	}
+}

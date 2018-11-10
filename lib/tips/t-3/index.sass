@@ -1,0 +1,28 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-tips-3
+	padding-top: rem(18px)
+	padding-bottom: rem(20px)
+	.nth-tips-tagline-wrapper
+		+size(100%, rem(30px))
+		+pos(relative, null)
+		&:before
+			+pos(abs, null null 0 9.375rem)
+			content: ''
+			width: calc(100% - 9.375rem)
+			height: rem(1px)
+			background-color: color-get($mau, main)
+		.nth-tips-tagline-content
+			+size(rem(150px), rem(30px))
+			line-height: rem(30px)
+			text-align: center
+			margin-bottom: 0
+			+fz(14px)
+			+fw(400)
+			color: color-get($mau, trang)
+			border-top-right-radius: rem(9px)
+			border-top-left-radius: rem(9px)
+			background-color: color-get($mau, main)

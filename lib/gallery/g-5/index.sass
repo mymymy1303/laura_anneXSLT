@@ -1,0 +1,25 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.nth-gallery-5
+	.nth-gallery-button
+		display: block
+		text-decoration: none
+		+size(rem(150px), rem(40px))
+		line-height: rem(40px)
+		text-align: center
+		+fz(rem(16px))
+		+fw(400)
+		color: color-get($mau, trang)
+		background-color: color-get($mau, main)
+		+bor-rad(rem(20px))
+		margin-left: auto
+		margin-right: auto
+		+transition(.3s ease-in-out)
+		&:active, &:focus
+			+bor-rad(10px)
+		+media-breakpoint-up(lg)
+			&:hover
+				+bor-rad(10px)
