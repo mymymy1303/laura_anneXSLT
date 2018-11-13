@@ -9,7 +9,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-xl-3">
-						<div id="productFilterMapTo"></div>
+						<div class="productFilterMapTo"></div>
 					</div>
 					<div class="col-12 col-lg-8 col-xl-9">
 						<div class="nth-product-2-intro">
@@ -22,7 +22,7 @@
 								<option value="Mới nhất">Mới nhất</option>
 							</select>
 						</div>
-						<div class="row">
+						<div class="row ajaxresponse product-list-wrapper">
 							<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
 						</div>
 					</div>

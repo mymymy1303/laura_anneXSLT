@@ -66,24 +66,18 @@
 							</xsl:attribute>
 						</option>
 					</select>
-					<select bg-img="/Data/Sites/1/skins/default/img/_global/selectarrow.png">
+					<!-- <select bg-img="/Data/Sites/1/skins/default/img/_global/selectarrow.png">
 						<option value="">
 						</option>
-					</select>
+					</select> -->
 				</div>
-				<ul class="nth-allocation-3-mapchooser">
-					<!-- <xsl:apply-templates select="Dealer" mode="load"></xsl:apply-templates> -->
-					<li class="mapchooser-active">
-						<h3>Chi nhánh Sài Gòn</h3>
-						<p>162 Trần Hưng Đạo, Phường 7, Quận 5, TPHCM</p>
-						<p>028.39.526.306</p>
-					</li>
-					<li>
-						<h3>Chi nhánh An Phú</h3>
-						<p>649/36 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP.HCM</p>
-						<p>Điện thoại: 028.38.995.995</p>
-					</li>
-				</ul>
+				<div id="results" class="dealer-list">
+					<ul class="nth-allocation-3-mapchooser" id="list">
+						<!-- <div id="ajax_msg" class="locate mrb15">
+						</div> -->
+					</ul>
+				</div>
+
 				<a class="nth-allocation-3-closebutton" href="javascript:void(0)">
 					<i class="mdi mdi-close"></i>
 				</a>
@@ -97,12 +91,6 @@
 						<div class="nth-allocation-4-mapchooser-toggle">
 							<a href="javascript:void(0)" id="mapchoosertoggle">Tìm kiếm chi nhánh</a>
 						</div>
-						<div class="nth-allocation-4-mappreview">
-							<!-- <h3>Chi nhánh Sài Gòn</h3>
-							<p>162 Trần Hưng Đạo, Phường 7, Quận 5, TPHCM</p>
-							<p>028.39.526.306</p> -->
-							<xsl:value-of select="txtAddress" disable-output-escaping="yes"></xsl:value-of>
-						</div>
 						<div class="nth-allocation-4-sidemenu" id="allocationSidemenu"></div>
 						<input type="hidden" id="distance" name="distance" value="1" />
 						<div id="map_canvas" class="allocation_map">
@@ -113,7 +101,7 @@
 		</section>
 	</xsl:template>
 
-	<xsl:template match="Dealer" mode="load">
+	<!-- <xsl:template match="Dealer" mode="load">
 		<li class="">
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="class">
@@ -130,5 +118,5 @@
 				<xsl:value-of select="Phone" disable-output-escaping="yes"></xsl:value-of>
 			</p>
 		</li>
-	</xsl:template>
+	</xsl:template> -->
 </xsl:stylesheet>
