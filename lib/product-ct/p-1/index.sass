@@ -131,13 +131,13 @@
 
 
 	.product-linked-shop-wrapper
-		+size(rem(295px), 0)
+		+size(rem(295px), auto)
 		background-color: #f7f7f7
 		padding-left: rem(5px)
 		padding-right: rem(5px)
 		padding-bottom: 0
 		overflow: hidden
-		opacity: 0
+		opacity: 1
 		position: absolute
 		left: 50%
 		transform: translateX(-50%)
@@ -165,7 +165,7 @@
 			justify-content: center
 			align-items: center
 			flex-wrap: wrap
-			.product-linked-shop-item
+			a, .product-linked-shop-item
 				+size(rem(84px), rem(52px))
 				background-color: color-get($mau, trang)
 				+pos(relative, null)

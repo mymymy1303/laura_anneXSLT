@@ -192,12 +192,21 @@
 				// +pos(abs , null 15px -4.5rem null)
 				margin-left: auto
 
-#ctl00_mainContent_ctl07_captcha_CaptchaLinkButton
-	i, em
+.rcRefreshImage
+	font-size: 0
+	position: relative
+	text-decoration: none
+	color: transparent
+	&:visited, &:active, &:hover
+		color: transparent
+	&:before
 		+fz(rem(30px))
 		color: #9d907f
 		margin-left: .5rem
 		margin-right: .5rem
+		font-family: "Font Awesome 5 Free"
+		content: "\f2f9"
+		font-weight: 900
 #ctl00_mainContent_ctl07_divCaptcha
 	display: flex
 	justify-content: center

@@ -15,67 +15,86 @@
 		</div>
 
 		<div class="ajaxfilterresponse product-filter-attribute-wrapper product-filter-attribute-wrapper-active">
-			<xsl:apply-templates select="/ProductFilter/Group"></xsl:apply-templates>
+			<xsl:apply-templates select="/ProductFilter/Group" mode="UpperGroup"></xsl:apply-templates>
+			<div class="product-filter-attribute">
+				<h4 class="product-filter-attribute-title mb-3">Khoảng giá</h4>
+				<div class="filter-option clearfix">
+					<div class="filter-range">
+						<div id="slider-range"></div>
+						<div class="price-range">
+							<xsl:value-of select="/ProductFilter/FromPriceText"></xsl:value-of>
+							<div class="sliderValue min-input" data-index="0"></div>
+							<xsl:value-of select="/ProductFilter/ToPriceText"></xsl:value-of>
+							<div class="sliderValue max-input" data-index="1"></div>
+						</div>
+						<div class="hidden">
+							<a class="urlwithoutprice">
+								<xsl:attribute name="href">
+									<xsl:value-of select="/ProductFilter/UrlWithoutPrice"></xsl:value-of>
+								</xsl:attribute>
+							</a>
+							<a class="urlwithprice">
+								<xsl:attribute name="href">
+									<xsl:value-of select="/ProductFilter/UrlWithPrice"></xsl:value-of>
+								</xsl:attribute>
+							</a>
+							<a class="pricemin">
+								<xsl:value-of select="/ProductFilter/PriceMin"></xsl:value-of>
+							</a>
+							<a class="pricemax">
+								<xsl:value-of select="/ProductFilter/PriceMax"></xsl:value-of>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<xsl:apply-templates select="/ProductFilter/Group" mode="LowerGroup"></xsl:apply-templates>
 		</div>
-		<!-- <div class="filter-group clearfix">
-			<div class="filter-title">
-				<span>
-					<xsl:value-of select="/ProductFilter/PriceRangeText"></xsl:value-of>
-				</span>
-				<div class="btn-reset">
-					<i class="fa fa-undo" aria-hidden="true"></i>
-				</div>
-			</div>
-			<div class="filter-option clearfix">
-				<div class="filter-range">
-					<div id="slider-range"></div>
-					<div class="price-range">
-						<xsl:value-of select="/ProductFilter/FromPriceText"></xsl:value-of>
-						<div class="sliderValue min-input" data-index="0"></div>
-						<xsl:value-of select="/ProductFilter/ToPriceText"></xsl:value-of>
-						<div class="sliderValue max-input" data-index="1"></div>
-					</div>
-					<div class="hidden">
-						<a class="urlwithoutprice">
-							<xsl:attribute name="href">
-								<xsl:value-of select="/ProductFilter/UrlWithoutPrice"></xsl:value-of>
-							</xsl:attribute>
-						</a>
-						<a class="urlwithprice">
-							<xsl:attribute name="href">
-								<xsl:value-of select="/ProductFilter/UrlWithPrice"></xsl:value-of>
-							</xsl:attribute>
-						</a>
-						<a class="pricemin">
-							<xsl:value-of select="/ProductFilter/PriceMin"></xsl:value-of>
-						</a>
-						<a class="pricemax">
-							<xsl:value-of select="/ProductFilter/PriceMax"></xsl:value-of>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div> -->
+
 	</xsl:template>
 
-	<xsl:template match="Group">
-		<div class="product-filter-attribute">
-			<h4 class="product-filter-attribute-title">
-				<xsl:value-of select="Title"></xsl:value-of>
-			</h4>
-			<xsl:choose>
-				<xsl:when test="FieldType='1'">
-					<div class="product-filter-attribute-item">
-						<xsl:apply-templates select="Option" mode="Color"></xsl:apply-templates>
-					</div>
-				</xsl:when>
-				<xsl:otherwise>
-					<div class="product-filter-attribute-item">
-						<xsl:apply-templates select="Option" mode="Default"></xsl:apply-templates>
-					</div>
-				</xsl:otherwise>
-			</xsl:choose>
-		</div>
+	<xsl:template match="Group" mode="UpperGroup">
+		<xsl:if test="not(position()=last())">
+			<div class="product-filter-attribute">
+				<h4 class="product-filter-attribute-title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</h4>
+				<xsl:choose>
+					<xsl:when test="FieldType='1'">
+						<div class="product-filter-attribute-item">
+							<xsl:apply-templates select="Option" mode="Color"></xsl:apply-templates>
+						</div>
+					</xsl:when>
+					<xsl:otherwise>
+						<div class="product-filter-attribute-item">
+							<xsl:apply-templates select="Option" mode="Default"></xsl:apply-templates>
+						</div>
+					</xsl:otherwise>
+				</xsl:choose>
+			</div>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="Group" mode="LowerGroup">
+		<xsl:if test="position()=last()">
+			<div class="product-filter-attribute">
+				<h4 class="product-filter-attribute-title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</h4>
+				<xsl:choose>
+					<xsl:when test="FieldType='1'">
+						<div class="product-filter-attribute-item">
+							<xsl:apply-templates select="Option" mode="Color"></xsl:apply-templates>
+						</div>
+					</xsl:when>
+					<xsl:otherwise>
+						<div class="product-filter-attribute-item">
+							<xsl:apply-templates select="Option" mode="Default"></xsl:apply-templates>
+						</div>
+					</xsl:otherwise>
+				</xsl:choose>
+			</div>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="Option" mode="Color">

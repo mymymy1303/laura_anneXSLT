@@ -16,7 +16,7 @@
 							<h1 class="nth-product-2-title">
 								Laura Anne <xsl:value-of select="/ProductList/ZoneTitle"></xsl:value-of>
 							</h1>
-							<select bg-img="./img/_global/selectarrow.png">
+							<select bg-img="/Data/Sites/1/skins/default/img/_global/selectarrow.png">
 								<option value="Mới nhất">Mới nhất</option>
 								<option value="Mới nhất">Mới nhất</option>
 								<option value="Mới nhất">Mới nhất</option>

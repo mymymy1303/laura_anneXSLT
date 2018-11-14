@@ -184,39 +184,7 @@
 											color: color-get($mau, den-1)
 											z-index: 2
 
-						.priceRangeToolTips
-							color: color-get($mau, den-1)
-							+fz(rem(11px))
-							+fw(500)
-							margin-top: .3rem
-							span
-								color: color-get($mau, main)
 
-						.slider.slider-horizontal
-							+size(rem(151px), rem(2px))
-							.slider-track
-								+size(rem(151px), rem(2px))
-								background-image: none
-								background-repeat: no-repeat
-								box-shadow: none
-								margin-top: 0
-								.slider-track-low, .slider-track-high
-									height: rem(2px)
-									background-color: color-get($mau, xam-19)
-								.slider-selection
-									background-color: color-get($mau, main)
-									height: 2px
-									background-image: none
-									background-repeat: no-repeat
-									box-shadow: none
-									margin-top: 0
-							.slider-handle
-								box-shadow: none
-								+size(rem(10px))
-								background-color: color-get($mau, main)
-								background-image: none
-								margin-left: rem(-5px)
-								top: rem(-3px)
 
 			.product-filter-sidemenu-close-button
 				+size(2rem)
@@ -239,4 +207,51 @@
 			&.product-filter-sidemenu-backdrop-active
 				right: 0
 	
-	+media-breakpoint-up(lg)
+.priceRangeToolTips, .price-range
+	color: color-get($mau, den-1)
+	+fz(rem(11px))
+	+fw(500)
+	margin-top: .3rem
+	display: flex
+	justify-content: space-between
+	align-items: center
+	span, .sliderValue
+		color: color-get($mau, main)
+
+.filter-range
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	position: relative
+
+.price-range
+	width: 100%
+
+.slider.slider-horizontal
+	width: calc(100% - 0.625rem)
+	height: 2px
+	.slider-track
+		width: 100%
+		height: 2px
+		background-image: none
+		background-repeat: no-repeat
+		box-shadow: none
+		margin-top: 0
+		.slider-track-low, .slider-track-high
+			height: rem(2px)
+			background-color: color-get($mau, xam-19)
+		.slider-selection
+			background-color: color-get($mau, main)
+			height: 2px
+			background-image: none
+			background-repeat: no-repeat
+			box-shadow: none
+			margin-top: 0
+	.slider-handle
+		box-shadow: none
+		+size(rem(10px))
+		background-color: color-get($mau, main)
+		background-image: none
+		margin-left: rem(-5px)
+		top: rem(-3px)

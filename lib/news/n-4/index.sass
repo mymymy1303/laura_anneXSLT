@@ -10,7 +10,10 @@
 		text-decoration: none
 	figure.news.main-news
 		margin-top: 0
+		+media-breakpoint-up(md)
+			display: flex
 		+media-breakpoint-up(lg)
+			display: block
 			height: 100%
 			figcaption
 				+pad(rem(20px) rem(40px))
@@ -43,7 +46,7 @@
 				margin-bottom: .9rem
 				+media-breakpoint-up(lg)
 					+fz(rem(15px))
-					+text-clamp(3)
+					+text-clamp(2)
 			p
 				margin-bottom: 0
 				+fz(.75rem)
