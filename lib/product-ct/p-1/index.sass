@@ -137,18 +137,19 @@
 		padding-right: rem(5px)
 		padding-bottom: 0
 		overflow: hidden
-		opacity: 1
+		opacity: 0
 		position: absolute
 		left: 50%
-		transform: translateX(-50%)
+		transform: translateX(-50%) rotateY(180deg)
 		margin-top: rem(-20px)
 		z-index: 1
 		+box-shadow(0px 0px 9px 0px rgba(194,194,194,1))
-		+transition(.3s ease-in-out)
+		+transition(all .3s ease-in-out)
 		&.product-linked-shop-wrapper-active
-			height: auto
 			padding-bottom: 1rem
 			opacity: 1
+			transform: translateX(-50%) rotateY(0deg)
+
 		h2
 			margin-top: rem(10px)
 			margin-bottom: .5rem
@@ -176,3 +177,4 @@
 					width: 100%
 					height: auto
 					display: block
+					transform: scale(.85)
