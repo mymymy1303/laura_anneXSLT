@@ -50,7 +50,6 @@
 			</div>
 			<xsl:apply-templates select="/ProductFilter/Group" mode="LowerGroup"></xsl:apply-templates>
 		</div>
-
 	</xsl:template>
 
 	<xsl:template match="Group" mode="UpperGroup">

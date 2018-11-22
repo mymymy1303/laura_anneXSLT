@@ -41,9 +41,7 @@
 					margin-left: calc((18.75rem - 7.875rem)/2 - 1.875rem)
 					cursor: pointer
 		
-			.nth-allocation-3-mapchooser
-				+fz(0)
-				+no-spacing
+			.dealer-list
 				overflow-y: scroll
 				height: calc(100% - 17.4375rem)
 				&::-webkit-scrollbar
@@ -54,6 +52,19 @@
 
 				&::-webkit-scrollbar-thumb
 					background: color-get($mau, main)
+			.nth-allocation-3-mapchooser
+				+fz(0)
+				+no-spacing
+				// overflow-y: scroll
+				// height: calc(100% - 17.4375rem)
+				// &::-webkit-scrollbar
+				// 	width: rem(3px)
+
+				// &::-webkit-scrollbar-track
+				// 	background: color-get($mau, trang)
+
+				// &::-webkit-scrollbar-thumb
+				// 	background: color-get($mau, main)
 				li
 					+pad(.5rem rem(30px))
 					border-bottom: 1px solid color-get($mau, xam-30)

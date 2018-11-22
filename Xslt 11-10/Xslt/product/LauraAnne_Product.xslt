@@ -22,7 +22,7 @@
 								<option value="Mới nhất">Mới nhất</option>
 							</select>
 						</div>
-						<div class="row ajaxresponse product-list-wrapper">
+						<div class="row ajaxproductresponse product-list-wrapper">
 							<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
 						</div>
 					</div>
