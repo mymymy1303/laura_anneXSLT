@@ -12,6 +12,9 @@ html, body
 		background-color: color-get($mau,main)
 		color: #fff
 
+main
+	overflow-x: hidden
+
 h1, h2, h3, h4, h5, h6
 	font-size: initial
 
@@ -315,3 +318,132 @@ select
 
 .hidden
 	display: none
+
+.search-page
+	padding: 2rem 0
+	+media-breakpoint-up(lg)
+		padding: 4rem 0
+	h1
+		font-size: 1.25rem
+		font-weight: 600
+		color: #1c4072
+		margin-bottom: 0.75rem
+	.form-group
+		margin-bottom: 0
+		position: relative
+		input[type="text"]
+			border: 0
+			outline: none
+			border-radius: 0
+			box-shadow: 0 1px 0 0 #ebebeb
+			color: #333333
+		&:after
+			position: absolute
+			z-index: 1
+			content: "\F349"
+			font-family: "Material Design Icons"
+			font-size: 1.5rem
+			color: #1c4072
+			cursor: pointer
+			width: rem(36px)
+			height: rem(36px)
+			top: 0
+			right: rem(-36px)
+			line-height: rem(36px)
+			text-align: center
+	input[type="submit"]
+		position: relative
+		z-index: 2
+		font-size: 0
+		width: rem(36px)
+		height: rem(36px)
+		border: 0
+		outline: none
+		border-radius: 0
+		box-shadow: 0 1px 0 0 #ebebeb
+		background-color: transparent
+		padding: 0
+		line-height: rem(36px)
+		text-align: center
+.searchresults
+	a.product-img
+		+pos(relative, null)
+		overflow: hidden
+		width: 100%
+		background-color: color-get($mau, xam-2)
+		+flex-center-center()
+		height: rem(340px)
+		+transition(.3s ease-in-out)
+		padding-left: 2rem
+		padding-right: 2rem
+		&:before
+			+size(100%)
+			+pos(abs, 0 0 null null)
+			content: ''
+			background-color: rgba(0, 0, 0, .45)
+			opacity: 0
+			+transition(.3s ease-in-out)
+		img
+			max-width: 100%
+			height: auto
+	figcaption
+		+flex-center-center()
+		flex-direction: column
+		margin-bottom: 3rem
+		.buy
+			display: none
+		.product-brand
+			+fz(rem(15px))
+			+fw(400)
+			color: color-get($mau, den-1)
+			text-transform: uppercase
+			margin-bottom: 0
+			margin-top: rem(20px)
+		.product-name
+			+fz(rem(13px))
+			+fw(700)
+			color: color-get($mau, den-1)
+			text-transform: uppercase
+			margin-top: .4rem
+			margin-bottom: rem(20px)
+			text-align: center
+			margin-bottom: 0.5rem
+			a.btn-detail
+				font-size: 0.9375rem
+				font-weight: 400
+				color: #333333
+				text-transform: uppercase
+				margin-bottom: 0
+				margin-top: .5rem
+		.product-price
+			+size(rem(150px), rem(40px))
+			+bor-rad(rem(20px))
+			background-color: color-get($mau, main)
+			color: color-get($mau, trang)
+			text-align: center
+			+fz(rem(20px))
+			+fw(600)
+			line-height: rem(40px)
+
+	&:hover, &:active, &:focus
+		.product
+			.box-zoom
+				&:before
+					opacity: 1
+
+	.modulepager
+		&:first-child
+			display: none
+	ul.pagination
+		justify-content: center
+		align-items: center
+		display: none
+		+media-breakpoint-up(md)
+			display: flex
+			margin-bottom: 0
+			margin-top: 1rem
+
+	.searchsummary
+		margin-top: 2rem
+		margin-bottom: 2rem
+		color: #333333
